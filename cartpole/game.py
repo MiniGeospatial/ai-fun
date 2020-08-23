@@ -1,7 +1,4 @@
-from time import sleep
-
 import gym
-
 
 class Game:
     def __init__(self, player, render=False):
@@ -26,7 +23,7 @@ class Game:
     def scoreDisplay(self):
         if self.player.score < 20:
             print(f'👎 {type(self.player).__name__} - {self.player.score}!')
-        elif self.player.score < 250:
+        elif self.player.score < 200:
             print(f'😴 {type(self.player).__name__} - {self.player.score}!')
         elif self.player.score < 500:
             print(f'👍 {type(self.player).__name__} - {self.player.score}!')
