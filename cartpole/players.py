@@ -48,7 +48,7 @@ class NeatPlayer(Player):
 
     def action(self, observation):
         choices = self.winner.activate(observation)
-        return choices.index(min(choices))
+        return choices[0] >= 0
 
 class GenomePlayer(Player):
     def __init__(self, net):
@@ -57,4 +57,4 @@ class GenomePlayer(Player):
 
     def action(self, observation):
         choices = self.net.activate(observation)
-        return choices.index(min(choices))
+        return choices[0] >= 0
